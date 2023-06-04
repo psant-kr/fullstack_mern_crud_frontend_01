@@ -94,7 +94,7 @@ const App = () => {
     // getUsers()
   }
 
-  const handleUpdateData = async() => {
+  const handleUpdateData = async () => {
     setButton(false)
     console.log("my id", updateId)
     const response = await fetch(`http://localhost:8080/demo/${updateId}`, {
@@ -106,7 +106,7 @@ const App = () => {
     })
 
     const data = await response.json();
-    console.log(data,"ggg------");
+    console.log(data, "ggg------");
     getUsers()
 
   }
@@ -120,7 +120,7 @@ const App = () => {
       <input type='text' name="username" value={form.username} onChange={handleForm}></input>
       <label>password</label>
       <input type='password' name="password" value={form.password} onChange={handleForm}></input>
-
+      {/* //took help from vikash */}
       {
         button ? <button onClick={handleUpdateData} >Update data</button> : <button onClick={handleSubmit} >add</button>
       }
