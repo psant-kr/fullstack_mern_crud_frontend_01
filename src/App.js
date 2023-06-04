@@ -132,6 +132,7 @@ const App = () => {
         <ul>
           {users.map((user) =>
             <li key={user._id}>{user.username},{user.password} <button onClick={() => handleDelete(user._id)}>DELETE</button>
+            {/* // my logic on button */}
               <button onClick={() => handleUpdate(user._id, user.username, user.password)}>UPDATE</button> </li>
           )}
         </ul>
